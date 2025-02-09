@@ -1,0 +1,14 @@
+version: '3'
+services:
+  jekyll:
+    build: .
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/app
+  cms:
+    build: ./cms-dashboard
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./cms-dashboard:/app
