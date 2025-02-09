@@ -1,5 +1,17 @@
 {
   "projects": {
-    "default": "blog-cms-platform"
+    "default": "${FIREBASE_PROJECT_ID}"
+  },
+  "targets": {
+    "${FIREBASE_PROJECT_ID}": {
+      "hosting": {
+        "blog": [
+          "blog-cms-platform"
+        ],
+        "cms": [
+          "blog-cms-platform-cms"
+        ]
+      }
+    }
   }
 }
